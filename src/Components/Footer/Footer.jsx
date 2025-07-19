@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import './Footer.css'
 const Footer = () => {
   return (
-    <motion.footer
-      className="bg-dark text-light pt-5 pb-4"
+    <motion.footer 
+       className="footer-dark pt-5 pb-4"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
