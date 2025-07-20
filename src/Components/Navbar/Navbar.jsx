@@ -84,16 +84,17 @@ const CustomNavbar = () => {
                                             <motion.span variants={itemVariants}>Anexos</motion.span>
                                         </Nav.Link>
                                     </LinkContainer>
-                                    <LinkContainer to="/grupos" onClick={() => setExpanded(false)}>
-                                        <Nav.Link className="nav-item-animated">
-                                            <motion.span variants={itemVariants}>Grupos</motion.span>
-                                        </Nav.Link>
-                                    </LinkContainer>
                                     <LinkContainer to="/eventos" onClick={() => setExpanded(false)}>
                                         <Nav.Link className="nav-item-animated">
                                             <motion.span variants={itemVariants}>Eventos</motion.span>
                                         </Nav.Link>
                                     </LinkContainer>
+                                    <LinkContainer to="/grupos" onClick={() => setExpanded(false)}>
+                                        <Nav.Link className="nav-item-animated">
+                                            <motion.span variants={itemVariants}>Grupos</motion.span>
+                                        </Nav.Link>
+                                    </LinkContainer>
+
                                     <LinkContainer to="/nosotros" onClick={() => setExpanded(false)}>
                                         <Nav.Link className="nav-item-animated">
                                             <motion.span variants={itemVariants}>Nosotros</motion.span>
@@ -120,12 +121,13 @@ const CustomNavbar = () => {
                                 <LinkContainer to="/anexos">
                                     <Nav.Link className="me-3 fs-6 nav-item-animated">Anexos</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/grupos">
-                                    <Nav.Link className="me-3 fs-6 nav-item-animated">Grupos</Nav.Link>
-                                </LinkContainer>
                                 <LinkContainer to="/eventos">
                                     <Nav.Link className="me-3 fs-6 nav-item-animated">Eventos</Nav.Link>
                                 </LinkContainer>
+                                <LinkContainer to="/grupos">
+                                    <Nav.Link className="me-3 fs-6 nav-item-animated">Grupos</Nav.Link>
+                                </LinkContainer>
+
                                 <LinkContainer to="/nosotros">
                                     <Nav.Link className="me-3 fs-6 nav-item-animated">Nosotros</Nav.Link>
                                 </LinkContainer>
