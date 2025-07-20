@@ -16,7 +16,7 @@ const fadeIn = {
 const eventsData = [
     {
         tipo: "Brigada",
-        logo: "/Images/logo_brigada.png",
+        logo: "/Images/b12.jpg",
         nombre: "Brigada Esperanza Viva",
         descripcion: "Jornada de recuperación en zonas vulnerables con acompañamiento terapéutico, alimentación, cortes de cabello y actividades de apoyo espiritual.",
         fecha: "Agosto 24, 2025",
@@ -47,7 +47,6 @@ const Events = () => {
                     >
                         Nuestros Eventos
                     </motion.h2>
-
                     <motion.p
                         className="text-center mb-5 fs-6 text-white"
                         initial="hidden"
@@ -57,7 +56,6 @@ const Events = () => {
                     >
                         En Vikingos Colombia realizamos eventos que fortalecen la recuperación y la transformación personal. Nuestras brigadas y experiencias están diseñadas para brindar ayuda real, amor y propósito. La información sobre reuniones puedes encontrarla en la sección "Grupos".
                     </motion.p>
-
                     <div className="row">
                         {eventsData.map((evento, index) => (
                             <motion.div
@@ -70,12 +68,13 @@ const Events = () => {
                                 variants={fadeIn}
                             >
                                 <div className="event-card bg-secondary text-light shadow-lg rounded-4 overflow-hidden d-flex flex-column align-items-center text-center p-4">
-                                    <img
-                                        src={evento.logo}
-                                        alt={evento.tipo}
-                                        className="mb-3"
-                                        style={{ height: '80px', objectFit: 'contain' }}
-                                    />
+<img
+    src={evento.logo}
+    alt={evento.tipo}
+    className="img-fluid w-100 mb-3 rounded-top"
+    style={{ height: '200px', objectFit: 'contain', backgroundColor: '#111' }}
+/>
+
                                     <h5 className="fw-bold">{evento.nombre}</h5>
                                     <p className="text-muted small mb-1">📅 {evento.fecha}</p>
                                     <p className="text-muted small mb-3">📍 {evento.lugar}</p>
