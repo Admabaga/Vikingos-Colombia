@@ -68,13 +68,12 @@ const Events = () => {
                                 variants={fadeIn}
                             >
                                 <div className="event-card bg-secondary text-light shadow-lg rounded-4 overflow-hidden d-flex flex-column align-items-center text-center p-4">
-<img
-    src={evento.logo}
-    alt={evento.tipo}
-    className="img-fluid w-100 mb-3 rounded-top"
-    style={{ height: '200px', objectFit: 'contain', backgroundColor: '#111' }}
-/>
-
+                                    <img
+                                        src={evento.logo}
+                                        alt={evento.tipo}
+                                        className="img-fluid w-100 mb-3 rounded-top"
+                                        style={{ height: '240px', objectFit: 'contain', backgroundColor: '#111' }}
+                                    />
                                     <h5 className="fw-bold">{evento.nombre}</h5>
                                     <p className="text-muted small mb-1">📅 {evento.fecha}</p>
                                     <p className="text-muted small mb-3">📍 {evento.lugar}</p>
