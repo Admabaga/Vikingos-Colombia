@@ -1,0 +1,37 @@
+.grupos-section {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.grupo-card {
+  border-radius: 1rem;
+  background-color: #1b1b1f;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grupo-card .card-body {
+  padding: 1.5rem;
+  color: #e0e0e0 !important;
+}
+
+.map-responsive {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.15);
+}
+
+/* Nuevo estilo para lista de reuniones */
+.grupo-card ul {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.grupo-card h6 i {
+  vertical-align: middle;
+}
