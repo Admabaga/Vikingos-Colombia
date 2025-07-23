@@ -20,15 +20,15 @@ const eventsData = [
         nombre: "Brigada 12 Colombia",
         descripcion: "Jornada de recuperación en zonas vulnerables con acompañamiento terapéutico, alimentación, cortes de cabello y actividades de apoyo espiritual.",
         fecha: "Agosto 24, 2025",
-        lugar: "Barrio Belén Altavista, Medellín",
+        lugar: "Plazoleta estacion prado, Medellín",
     },
     {
         tipo: "Experiencia",
         logo: "/Images/logo_experiencia.png",
-        nombre: "Experiencia Renacer",
+        nombre: "Experiencia Espiritual",
         descripcion: "Un retiro de 3 días en entorno natural con talleres de introspección, charlas espirituales, dinámicas de grupo y acompañamiento emocional.",
-        fecha: "Septiembre 13-15, 2025",
-        lugar: "Finca El Manantial, Rionegro - Antioquia",
+        fecha: "Agosto 15, 16 y 17 2025",
+        lugar: "Finca El Polo, Piedecuesta - Santander",
     }
 ];
 
