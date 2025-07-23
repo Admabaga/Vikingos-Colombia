@@ -12,7 +12,7 @@ const groupsData = [
         contacto: '3193876916',
         reuniones: ['Lunes a Viernes - 7:30 PM', 'Sabado - 7:00 PM'],
         mapaEmbed: 'https://www.google.com/maps/embed?...',
-        logo: '/Images/Vcaldas.jpg',
+        logo: '/Images/Imagen_de_WhatsApp_2025-07-22_a_las_15.12.59_2b28f178-removebg-preview.png',
     },
     {
         nombre: 'Vikingos - Medellin',
@@ -20,7 +20,7 @@ const groupsData = [
         contacto: '3043368546',
         reuniones: ['Lunes a Viernes - 7:30 PM', 'Sabados - 7:00 PM'],
         mapaEmbed: 'https://www.google.com/maps/embed?...',
-        logo: '/logos/medellin-logo.png',
+        logo: '/Images/Vcaldas.jpg',
     },
     {
         nombre: 'Vikingos - Barrancabermeja',

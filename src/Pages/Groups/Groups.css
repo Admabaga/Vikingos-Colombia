@@ -26,7 +26,6 @@
   box-shadow: 0 0 10px rgba(255, 69, 0, 0.15);
 }
 
-/* Nuevo estilo para lista de reuniones */
 .grupo-card ul {
   padding-left: 1rem;
   margin-bottom: 0.5rem;
@@ -37,10 +36,7 @@
 }
 
 .grupo-logo {
-  max-height: 80px;
+  max-height: 100px;
   object-fit: contain;
-  border-radius: 0.5rem;
-  background-color: #fff;
   padding: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
