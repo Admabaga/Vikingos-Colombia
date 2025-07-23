@@ -17,7 +17,7 @@ const eventsData = [
     {
         tipo: "Brigada",
         logo: "/Images/b12.jpg",
-        nombre: "Brigada Esperanza Viva",
+        nombre: "Brigada 12 Colombia",
         descripcion: "Jornada de recuperación en zonas vulnerables con acompañamiento terapéutico, alimentación, cortes de cabello y actividades de apoyo espiritual.",
         fecha: "Agosto 24, 2025",
         lugar: "Barrio Belén Altavista, Medellín",
