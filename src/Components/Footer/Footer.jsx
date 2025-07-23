@@ -21,7 +21,7 @@ const Footer = () => {
             <h6 className="text-uppercase fw-semibold mb-3">Navegación</h6>
             <ul className="list-unstyled">
               <li><a href="/" className="text-light text-decoration-none">Inicio</a></li>
-              <li><a href="#eventos" className="text-light text-decoration-none">Eventos</a></li>
+              <li><a href="/eventos" className="text-light text-decoration-none">Eventos</a></li>
               <li><a href="/grupos" className="text-light text-decoration-none">Grupos</a></li>
               <li><a href="/anexos" className="text-light text-decoration-none">Anexos</a></li>
               <li><a href="#contacto" className="text-light text-decoration-none">Contacto</a></li>
