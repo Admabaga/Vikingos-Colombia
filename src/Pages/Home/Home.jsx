@@ -28,14 +28,14 @@ const Home = () => {
                         <span style={{ color: '#e79702ff' }}>Vikingos Colombia</span>
                     </h1>
                     <p className="lead">Recuperación. Comunidad. Transformación.</p>
-                    <Link to="/nosotros" className="btn btn-danger mt-3 px-4 py-2">
-                        Conócenos
-                    </Link>
+                    <a href="#eventos" className="btn btn-danger mt-3 px-4 py-2">
+                        Descubre mas
+                    </a>
                 </div>
             </header>
 
             {/* EVENTOS */}
-            <section className="media-preview bg-light py-5">
+            <section className="media-preview bg-light py-5" id='eventos'>
                 <div className="container">
                     <motion.h2
                         className="text-center mb-4 fw-bold"

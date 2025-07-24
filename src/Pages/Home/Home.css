@@ -1,12 +1,15 @@
-/* Home.css */
 
 /* HERO */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('/Images/hero-bg.jpg') center center/cover no-repeat;
-  height: 85vh;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .hero-section h1 {
