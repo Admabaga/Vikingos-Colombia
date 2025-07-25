@@ -39,4 +39,5 @@
   max-height: 170px;
   object-fit: contain;
   padding: 0.5rem;
+  filter: brightness(0.85);
 }
