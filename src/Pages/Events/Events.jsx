@@ -39,11 +39,12 @@ const Events = () => {
             <section id="eventos" className="bg-dark text-light py-5">
                 <div className="container">
                     <motion.h2
-                        className="text-center fw-bold mb-4"
+                        className="text-center fw-bold mb-4 display-5"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeIn}
+                        style={{ color: '#e79702ff' }}
                     >
                         Nuestros Eventos
                     </motion.h2>

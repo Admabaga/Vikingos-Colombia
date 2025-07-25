@@ -41,11 +41,12 @@ const Annexes = () => {
             <section id="anexos" className="bg-dark text-light py-5">
                 <div className="container">
                     <motion.h2
-                        className="text-center mb-5 fw-bold display-5 text-white"
+                        className="text-center mb-5 fw-bold display-5 "
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeIn}
+                        style={{ color: '#e79702ff' }}
                     >
                         Lugares de Recuperación
                     </motion.h2>

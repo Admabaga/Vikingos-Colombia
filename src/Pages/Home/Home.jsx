@@ -23,10 +23,19 @@ const Home = () => {
             {/* HERO */}
             <header className="hero-section text-white d-flex align-items-center justify-content-center">
                 <div className="text-center">
+                    <div className="hero-logo-container mb-3">
+                        <img
+                            src="/Images/5-removebg-preview.png"
+                            alt="Logo Vikingos Colombia"
+                            className="hero-logo img-fluid"
+                        />
+                    </div>
+
                     <h1 className="display-4 fw-bold">
                         <span className="text-white">Bienvenidos a </span>
                         <span style={{ color: '#e79702ff' }}>Vikingos Colombia</span>
                     </h1>
+
                     <p className="lead">Recuperación. Comunidad. Transformación.</p>
                     <a href="#eventos" className="btn btn-danger mt-3 px-4 py-2">
                         Descubre mas

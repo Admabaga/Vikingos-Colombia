@@ -20,11 +20,12 @@ const Us = () => {
             <section id="nosotros" className="us-section">
                 <div className="container py-5">
                     <motion.h2
-                        className="text-center mb-5 fw-bold display-5 text-white"
+                        className="text-center mb-5 fw-bold display-5 "
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
+                        style={{ color: '#e79702ff' }}
                     >
                         Sobre Nosotros
                     </motion.h2>

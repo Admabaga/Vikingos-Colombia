@@ -28,6 +28,23 @@
   border-radius: 2rem;
 }
 
+.hero-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+
 /* EVENTOS */
 .media-preview h2 {
   font-family: 'Poppins', sans-serif;
