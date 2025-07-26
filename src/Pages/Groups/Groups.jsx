@@ -28,7 +28,7 @@ const groupsData = [
         contacto: '3003368546',
         reuniones: ['Lunes a Viernes - 7:30 PM', 'Sabados - 7:00 PM'],
         mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5556306343883!2d-73.84178243025711!3d7.0613823011047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4293543499edbd%3A0x14490a5c8e5a6297!2sCl.%2052%20%23%2038A-7%20casa%201%2C%20Barrancabermeja%2C%20Santander!5e0!3m2!1ses!2sco!4v1753230147805!5m2!1ses!2sco',
-        logo: '/Images/3-removebg-preview.png',
+        logo: '/Images/4-removebg-preview.png',
     },
     {
         nombre: 'Vikingos - Un día a la vez',
