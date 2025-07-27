@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Carousel } from 'bootstrap';
 import CustomNavbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import ResumenCard from '../../Components/ResumeCard/ResumenCard';
 import './Home.css';
+import { Carousel } from 'bootstrap';
+import { useEffect } from 'react';
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -15,6 +17,7 @@ const fadeInUp = {
         transition: { delay: 0.1 * i, duration: 0.6 },
     }),
 };
+
 
 const Home = () => {
     useEffect(() => {
@@ -35,12 +38,11 @@ const Home = () => {
         }
     }, []);
 
-
     return (
         <>
             <CustomNavbar />
 
-            {/* Hero Section */}
+            {/* HERO */}
             <header className="hero-section text-white d-flex align-items-center justify-content-center">
                 <div className="text-center">
                     <div className="hero-logo-container mb-3">
@@ -58,13 +60,13 @@ const Home = () => {
 
                     <p className="lead">Recuperación. Comunidad. Transformación.</p>
                     <a href="#eventos" className="btn btn-danger mt-3 px-4 py-2">
-                        Descubre más
+                        Descubre mas
                     </a>
                 </div>
             </header>
 
-            {/* Eventos Section */}
-            <section className="media-preview bg-light py-5" id="eventos">
+            {/* EVENTOS */}
+            <section className="media-preview bg-light py-5" id='eventos'>
                 <div className="container">
                     <motion.h2
                         className="text-center mb-4 fw-bold"
@@ -86,6 +88,7 @@ const Home = () => {
                                     data-bs-ride="carousel"
                                     data-bs-interval="4000"
                                 >
+                                    {/* Indicadores */}
                                     <div className="carousel-indicators">
                                         {[0, 1, 2, 3, 4].map((index) => (
                                             <button
@@ -96,10 +99,9 @@ const Home = () => {
                                                 className={index === 0 ? 'active' : ''}
                                                 aria-current={index === 0 ? 'true' : undefined}
                                                 aria-label={`Slide ${index + 1}`}
-                                            />
+                                            ></button>
                                         ))}
                                     </div>
-
                                     <div className="carousel-inner rounded overflow-hidden">
                                         {[1, 2, 3, 4, 5].map((num, index) => (
                                             <div key={num} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
@@ -112,30 +114,27 @@ const Home = () => {
                                             </div>
                                         ))}
                                     </div>
-
                                     <button
                                         className="carousel-control-prev"
                                         type="button"
                                         data-bs-target="#brigadasCarousel"
                                         data-bs-slide="prev"
                                     >
-                                        <span className="carousel-control-prev-icon" aria-hidden="true" />
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Anterior</span>
                                     </button>
-
                                     <button
                                         className="carousel-control-next"
                                         type="button"
                                         data-bs-target="#brigadasCarousel"
                                         data-bs-slide="next"
                                     >
-                                        <span className="carousel-control-next-icon" aria-hidden="true" />
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Siguiente</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-
                         <div className="col-md-6">
                             <h5 className="text-danger mb-2">Experiencias</h5>
                             <div className="ratio ratio-16x9 rounded overflow-hidden">
@@ -143,7 +142,7 @@ const Home = () => {
                                     src="https://www.youtube.com/embed/Z9AYPxH5NTM"
                                     title="Experiencia Vikingos"
                                     allowFullScreen
-                                />
+                                ></iframe>
                             </div>
                         </div>
                     </div>
@@ -155,7 +154,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
             {/* Sección: Nuestros Grupos */}
             <section className="bg-dark text-light py-5">
                 <div className="container">
@@ -250,7 +248,8 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Anexos Section */}
+
+            {/* ANEXOS */}
             <section className="resumen-section py-5" style={{ backgroundColor: '#f9f2e7' }}>
                 <div className="container">
                     <motion.h2
@@ -262,7 +261,6 @@ const Home = () => {
                     >
                         Explora más
                     </motion.h2>
-
                     <div className="row justify-content-center g-4">
                         <div className="col-md-6 col-lg-4">
                             <ResumenCard
@@ -272,7 +270,6 @@ const Home = () => {
                                 link="/nosotros"
                             />
                         </div>
-
                         <div className="col-md-6 col-lg-4">
                             <ResumenCard
                                 icon="ri-home-heart-line"

@@ -24,7 +24,7 @@
 }
 
 .text-accent {
-    color: #ff2e63;
+    color: #ff2e63 !important;
     /* Rojo Vikingos */
 }
 
