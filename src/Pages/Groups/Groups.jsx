@@ -56,7 +56,7 @@ const Groups = () => {
             <section className="grupos-section bg py-5">
                 <div className="container">
                     <motion.h2
-                        className="text-center mb-5 fw-bold display-5 "
+                        className="text-center mb-4 fw-bold display-5 "
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

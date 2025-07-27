@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Carousel } from 'bootstrap';
 import CustomNavbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import ResumenCard from '../../Components/ResumeCard/ResumenCard';
@@ -16,11 +17,30 @@ const fadeInUp = {
 };
 
 const Home = () => {
+    useEffect(() => {
+        const brigadasCarousel = document.querySelector('#brigadasCarousel');
+        if (brigadasCarousel) {
+            new Carousel(brigadasCarousel, {
+                interval: 3000,
+                ride: 'carousel',
+            });
+        }
+
+        const gruposCarousel = document.querySelector('#gruposCarousel');
+        if (gruposCarousel) {
+            new Carousel(gruposCarousel, {
+                interval: 4000,
+                ride: 'carousel',
+            });
+        }
+    }, []);
+
+
     return (
         <>
             <CustomNavbar />
 
-            {/* HERO */}
+            {/* Hero Section */}
             <header className="hero-section text-white d-flex align-items-center justify-content-center">
                 <div className="text-center">
                     <div className="hero-logo-container mb-3">
@@ -38,13 +58,13 @@ const Home = () => {
 
                     <p className="lead">Recuperación. Comunidad. Transformación.</p>
                     <a href="#eventos" className="btn btn-danger mt-3 px-4 py-2">
-                        Descubre mas
+                        Descubre más
                     </a>
                 </div>
             </header>
 
-            {/* EVENTOS */}
-            <section className="media-preview bg-light py-5" id='eventos'>
+            {/* Eventos Section */}
+            <section className="media-preview bg-light py-5" id="eventos">
                 <div className="container">
                     <motion.h2
                         className="text-center mb-4 fw-bold"
@@ -59,14 +79,59 @@ const Home = () => {
                     <div className="row g-4">
                         <div className="col-md-6">
                             <h5 className="text-danger mb-2">Brigadas</h5>
-                            <div id="brigadasCarousel" className="carousel slide" data-bs-ride="carousel">
-                                <div className="carousel-inner rounded overflow-hidden">
-                                    <div className="carousel-item active">
-                                        <img src="/Images/brigada1.jpg" className="d-block w-100" alt="Brigada 1" />
+                            <div className="carousel-wrapper position-relative">
+                                <div
+                                    id="brigadasCarousel"
+                                    className="carousel slide shadow-sm rounded"
+                                    data-bs-ride="carousel"
+                                    data-bs-interval="4000"
+                                >
+                                    <div className="carousel-indicators">
+                                        {[0, 1, 2, 3, 4].map((index) => (
+                                            <button
+                                                key={index}
+                                                type="button"
+                                                data-bs-target="#brigadasCarousel"
+                                                data-bs-slide-to={index}
+                                                className={index === 0 ? 'active' : ''}
+                                                aria-current={index === 0 ? 'true' : undefined}
+                                                aria-label={`Slide ${index + 1}`}
+                                            />
+                                        ))}
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="/Images/brigada2.jpg" className="d-block w-100" alt="Brigada 2" />
+
+                                    <div className="carousel-inner rounded overflow-hidden">
+                                        {[1, 2, 3, 4, 5].map((num, index) => (
+                                            <div key={num} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                                                <img
+                                                    src={`/Images/${num}-removebg-preview.png`}
+                                                    className="d-block w-100"
+                                                    alt={`Brigada ${num}`}
+                                                    style={{ maxHeight: '400px', objectFit: 'contain' }}
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
+
+                                    <button
+                                        className="carousel-control-prev"
+                                        type="button"
+                                        data-bs-target="#brigadasCarousel"
+                                        data-bs-slide="prev"
+                                    >
+                                        <span className="carousel-control-prev-icon" aria-hidden="true" />
+                                        <span className="visually-hidden">Anterior</span>
+                                    </button>
+
+                                    <button
+                                        className="carousel-control-next"
+                                        type="button"
+                                        data-bs-target="#brigadasCarousel"
+                                        data-bs-slide="next"
+                                    >
+                                        <span className="carousel-control-next-icon" aria-hidden="true" />
+                                        <span className="visually-hidden">Siguiente</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +143,7 @@ const Home = () => {
                                     src="https://www.youtube.com/embed/Z9AYPxH5NTM"
                                     title="Experiencia Vikingos"
                                     allowFullScreen
-                                ></iframe>
+                                />
                             </div>
                         </div>
                     </div>
@@ -91,9 +156,11 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* GRUPOS */}
+            {/* Sección: Nuestros Grupos */}
             <section className="bg-dark text-light py-5">
                 <div className="container">
+
+                    {/* Título con animación */}
                     <motion.h2
                         className="text-center mb-4 fw-bold"
                         initial="hidden"
@@ -103,27 +170,87 @@ const Home = () => {
                     >
                         Nuestros Grupos
                     </motion.h2>
-                    <div className="row g-4">
-                        <div className="col-md-6">
-                            <div className="rounded overflow-hidden">
-                                <img src="/Images/grupo_vikingos.jpg" className="img-fluid rounded" alt="Grupo 1" />
+
+                    {/* Carrusel de grupos */}
+                    <div className="carousel-wrapper position-relative">
+                        <div
+                            id="gruposCarousel"
+                            className="carousel slide shadow-sm rounded"
+                            data-bs-ride="carousel"
+                            data-bs-interval="4000"
+                        >
+                            {/* Indicadores del carrusel */}
+                            <div className="carousel-indicators">
+                                {[0, 1, 2, 3, 4].map((index) => (
+                                    <button
+                                        key={index}
+                                        type="button"
+                                        data-bs-target="#gruposCarousel"
+                                        data-bs-slide-to={index}
+                                        className={index === 0 ? 'active' : ''}
+                                        aria-current={index === 0 ? 'true' : undefined}
+                                        aria-label={`Grupo ${index + 1}`}
+                                    />
+                                ))}
                             </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="rounded overflow-hidden">
-                                <img src="/Images/grupo_vikingos2.jpg" className="img-fluid rounded" alt="Grupo 2" />
+
+                            {/* Imágenes del carrusel */}
+                            <div className="carousel-inner rounded overflow-hidden">
+                                {[
+                                    '1-removebg-preview.png',
+                                    '2-removebg-preview.png',
+                                    '3-removebg-preview.png',
+                                    '4-removebg-preview.png',
+                                    '5-removebg-preview.png'
+                                ].map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`carousel-item ${index === 0 ? 'active' : ''}`}
+                                    >
+                                        <img
+                                            src={`/Images/${img}`}
+                                            className="d-block w-100"
+                                            alt={`Grupo ${index + 1}`}
+                                            style={{ maxHeight: '400px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                ))}
                             </div>
+
+                            {/* Controles del carrusel */}
+                            <button
+                                className="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#gruposCarousel"
+                                data-bs-slide="prev"
+                            >
+                                <span className="carousel-control-prev-icon" aria-hidden="true" />
+                                <span className="visually-hidden">Anterior</span>
+                            </button>
+
+                            <button
+                                className="carousel-control-next"
+                                type="button"
+                                data-bs-target="#gruposCarousel"
+                                data-bs-slide="next"
+                            >
+                                <span className="carousel-control-next-icon" aria-hidden="true" />
+                                <span className="visually-hidden">Siguiente</span>
+                            </button>
                         </div>
                     </div>
+
+                    {/* Botón de enlace */}
                     <div className="text-center mt-4">
                         <Link to="/grupos" className="btn btn-outline-light btn-sm px-4 mt-2">
                             Conocer todos los grupos
                         </Link>
                     </div>
+
                 </div>
             </section>
 
-            {/* ANEXOS */}
+            {/* Anexos Section */}
             <section className="resumen-section py-5" style={{ backgroundColor: '#f9f2e7' }}>
                 <div className="container">
                     <motion.h2
@@ -135,6 +262,7 @@ const Home = () => {
                     >
                         Explora más
                     </motion.h2>
+
                     <div className="row justify-content-center g-4">
                         <div className="col-md-6 col-lg-4">
                             <ResumenCard
@@ -144,6 +272,7 @@ const Home = () => {
                                 link="/nosotros"
                             />
                         </div>
+
                         <div className="col-md-6 col-lg-4">
                             <ResumenCard
                                 icon="ri-home-heart-line"
