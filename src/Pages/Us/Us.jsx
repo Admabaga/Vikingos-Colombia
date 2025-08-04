@@ -60,7 +60,10 @@ const Us = () => {
                         <div>
                             <h4 className="fw-bold text-accent">Misión</h4>
                             <p className="text-light">
-                                Ser un espacio seguro y transformador para quienes buscan salir adelante. Promovemos la recuperación emocional, el crecimiento espiritual y el servicio comunitario mediante procesos humanos, reales y fraternos.
+                                Brindar apoyo integral a personas que enfrentan el alcoholismo,
+                                la drogadicción y otras adicciones, a través del acompañamiento de adictos en recuperación que comparten su experiencia,
+                                fortaleza y esperanza. Nuestra labor se basa en el trabajo espiritual y personal del programa de los 12 pasos,
+                                fomentando la comprensión, la tolerancia, el perdón y el respeto como pilares fundamentales del proceso de recuperación.
                             </p>
                         </div>
                     </motion.div>
@@ -77,7 +80,9 @@ const Us = () => {
                         <div>
                             <h4 className="fw-bold text-accent">Visión</h4>
                             <p className="text-light">
-                                Ser la comunidad de recuperación más representativa en Colombia, un referente de transformación social a nivel nacional con impacto profundo y duradero en miles de vidas.
+                                Ser una fraternidad de recuperación reconocida a nivel nacional por transformar vidas,
+                                promoviendo una comunidad solidaria donde cada persona encuentre una oportunidad real de cambio, libertad y propósito,
+                                guiada por el ejemplo de quienes han recorrido el mismo camino de recuperación.
                             </p>
                         </div>
                     </motion.div>
